@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+<section class="py-5">
+    <div class="container px-5 mb-5">
+        <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+                <!-- Project Card 1-->
+                {% for proyecto in proyectos %}
+                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bolder">{{proyecto['codigo']}}</h2>
+                                <p>es un servicio de streaming propiedad de The Walt Disney Company mediante su división Disney Entertainment.3​ El servicio ofrece películas, documentales, especiales, cortos, programas y series de televisión producidas por The Walt Disney Studios y Walt Disney Television. Su interfaz presenta diferentes secciones temáticas con contenidos de Disney, Pixar, Marvel, Star Wars, National Geographic y Star (este último, disponible fuera de Estados Unidos y América Latina).</p>
+                            </div>
+                            <img class="img-fluid" src="{{proyecto['imagen']}}" alt="..." />
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2-->
+                <div class="card overflow-hidden shadow rounded-4 border-0">
+                    <div class="card-body p-0">
+                        <div class="d-flex align-items-center">
+                            <div class="p-5">
+                                <h2 class="fw-bolder">{{proyecto['codigo']}}</h2>
+                                <p>Amazon Web Services (AWS abreviado) es una colección de servicios de computación en la nube pública (también llamados servicios web) que en conjunto forman una plataforma de computación en la nube, ofrecidas a través de Internet por Amazon.com. Es usado en aplicaciones populares como Dropbox, Foursquare, HootSuite. Es una de las ofertas internacionales más importantes de la computación en la nube y compite directamente con servicios como Microsoft Azure, Google Cloud Platform, Oracle Cloud e IBM Cloud. Es considerado como un pionero en este campo.2​</p>
+                            </div>
+                            <img class="img-fluid" src=""{{proyecto['imagen']}}" alt="..." />
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
